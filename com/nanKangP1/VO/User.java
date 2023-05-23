@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class User implements Serializable {
+    private int userID;
     private String userName;
     private String loginName;
     private String password;
@@ -11,13 +12,18 @@ public class User implements Serializable {
     private String company;
     private String department;
 
-    public User(String userName, String loginName, String password, Date createDate, String company, String department) {
+    public User(int userID,String userName, String loginName, String password, Date createDate, String company, String department) {
         this.userName = userName;
         this.loginName = loginName;
         this.password = password;
         this.createDate = createDate;
         this.company = company;
         this.department = department;
+    }
+
+
+    public int getUserID() {
+        return userID;
     }
 
     public String getUserName() {

@@ -8,6 +8,11 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
 
+
+/*
+* 封装DRUID，连接获取及回收均通过该类中方法实现
+* */
+
 public class JDBCUtils {
     private static DataSource ds;
     private static ThreadLocal<Connection> tl = new ThreadLocal<Connection>();
